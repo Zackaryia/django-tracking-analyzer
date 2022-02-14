@@ -27,11 +27,11 @@ class Tracker(models.Model):
     )
 
     content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE)
-    object_id = models.PositiveIntegerField()
+    object_id = models.PositiveIntegerField(blank=True)
 
-    user_agent = models.TextField()
-    requested_url_path = models.TextField()
-    requested_url_query = models.TextField()
+    user_agent = models.TextField(blank=True)
+    requested_url_path = models.TextField(blank=True)
+    requested_url_query = models.TextField(blank=True)
 
     content_object = GenericForeignKey('content_type', 'object_id')
     timestamp = models.DateTimeField(auto_now_add=True)
