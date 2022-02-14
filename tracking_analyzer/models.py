@@ -28,6 +28,11 @@ class Tracker(models.Model):
 
     content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE)
     object_id = models.PositiveIntegerField()
+
+    user_agent = models.TextField()
+    requested_url_path = models.TextField()
+    requested_url_query = models.TextField()
+
     content_object = GenericForeignKey('content_type', 'object_id')
     timestamp = models.DateTimeField(auto_now_add=True)
     ip_address = models.GenericIPAddressField(null=True, blank=True)

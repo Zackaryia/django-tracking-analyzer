@@ -33,7 +33,7 @@ Python ways:
 
 .. code-block:: bash
 
-   wget https://github.com/jose-lpa/django-tracking-analyzer/archive/master.zip
+   wget https://github.com/Zackaryia/django-tracking-analyzer/archive/master.zip
    unzip master.zip
    cd django-tracking-analyzer-master/
    python setup.py install

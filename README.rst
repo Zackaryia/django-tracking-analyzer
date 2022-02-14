@@ -4,18 +4,6 @@ Django Tracking Analyzer
 
 User actions tracking and analytics for Django sites
 
-.. image:: https://travis-ci.org/jose-lpa/django-tracking-analyzer.svg?branch=master
-    :target: https://travis-ci.org/jose-lpa/django-tracking-analyzer
-
-.. image:: https://codecov.io/gh/jose-lpa/django-tracking-analyzer/branch/master/graph/badge.svg
-    :target: https://codecov.io/gh/jose-lpa/django-tracking-analyzer
-
-.. image:: https://badge.fury.io/py/django-tracking-analyzer.svg
-    :target: https://badge.fury.io/py/django-tracking-analyzer
-
-.. image:: https://readthedocs.org/projects/django-tracking-analyzer/badge/?version=latest
-    :target: http://django-tracking-analyzer.readthedocs.io/en/latest/?badge=latest
-
 
 Requirements
 ============

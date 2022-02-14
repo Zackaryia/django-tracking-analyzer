@@ -17,7 +17,7 @@ class TrackerManager(models.Manager):
     Custom ``Tracker`` model manager that implements a method to create a new
     object instance from an HTTP request.
     """
-    def create_from_request(self, request, content_object):
+    def create_from_request(self, request, content_object=None):
         """
         Given an ``HTTPRequest`` object and a generic content, it creates a
         ``Tracker`` object to store the data of that request.
@@ -65,6 +65,10 @@ class TrackerManager(models.Manager):
                 )
 
         tracker = self.model.objects.create(
+            user_agent=request.META['HTTP_USER_AGENT'],
+            requested_url_path = request.META['PATH_INFO'],
+            requested_url_query = request.META['QUERY_STRING'],           
+
             content_object=content_object,
             ip_address=ip_address,
             ip_country=city.get('country_code', '') or '',
